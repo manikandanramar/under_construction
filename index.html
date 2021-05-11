@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Manichips</title>
+        <link rel="shortcut icon" href="/logo.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            .contentWrapper {
+                position: relative;
+                padding: 15px;
+                backdrop-filter: saturate(180%) blur(20px);
+                -webkit-backdrop-filter: blur(20px) saturate(180%);
+                background-color: rgba(255,255,255,0.72);
+                border-radius: 15px;
+                text-align: center;
+                margin: 15px;
+            }
+
+            .title {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 32px;
+                font-weight: bolder;
+            }
+
+            .caption {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px;
+                padding: 15px;
+            }
+
+            .stores {
+                display: grid;
+            }
+
+            .storeTitle {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                padding: 10px;
+                border-bottom: 1px dashed #212121;
+                border-top: 1px solid #212121;
+                margin-bottom: 10px;
+            }
+
+            .storeLogo {
+                width: 100px;
+            }
+
+            #social {
+                padding: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                display: grid;
+                border-top: 1px solid #212121;
+            }
+
+            .media {
+                text-decoration: none;
+                color: #0575e6;
+                margin-top: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body style="background-color: #fa273f; display: flex; justify-content: center;">
+        <div class="contentWrapper" >
+            <div class="title" >UNDER CONSTRUCTION</div>
+            <div class="caption" >Don't worry, we are preparing for something big - <b>Manichips</b></div>
+            <div class="stores" >
+                <div class="storeTitle" >Our products available on</div>
+                <a href="https://www.amazon.in/s?me=A1JWMQZ4OM8G6W&marketplaceID=A21TJRUUN4KGV" target="_blank" >
+                    <img class="storeLogo" src="https://firebasestorage.googleapis.com/v0/b/manichips-server.appspot.com/o/amazon.svg?alt=media&token=f92e727f-d920-45f0-83e1-2762883a81db" />
+                </a>
+                <a href="https://www.flipkart.com/search?q=manichips&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&augment=false" >
+                    <img class="storeLogo" src="https://firebasestorage.googleapis.com/v0/b/manichips-server.appspot.com/o/flipkart.svg?alt=media&token=949536dc-7387-49f5-a73e-2d124eb5cb4e" />
+                </a>
+            </div>
+            <div id="social" >
+                Connect with Us:
+            </div>
+            <script>
+                let socialDiv = document.getElementById('social');
+
+                [
+                    { name: "Facebook", to: "https://facebook.com/manichipsindia" },
+                    { name: "Instagram", to: "https://instagram.com/manichips" },
+                    { name: "Youtube", to: "https://youtube.com/channel/UCEuNpHqJ96KEJ6tGTCBOJjA" },
+                    { name: "Twitter", to: "https://twitter.com/manichips" },
+                    { name: "LinkedIn", to: "https://linkedin.com/company/manichips" },
+                ].map(function social_media(data) {
+                    let media = document.createElement('a');
+                    media.innerText = data.name;
+                    media.href = data.to;
+                    media.className = 'media';
+                    media.target = '__blank';
+                    socialDiv.appendChild(media)
+                })
+            </script>
+        </div>
+    </body>
+</html>
